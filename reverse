@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+read -p "Enter a string: " string
+
+
+length=$(echo $string | echo "$(wc -m) -1"|bc)
+	echo $length;
+for length in {$length..0..$length-1} do
+	reverse="$reverse${string:$length+1:1}"
+done
+echo $reverse
