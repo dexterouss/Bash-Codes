@@ -33,4 +33,6 @@ echo "Male chance of survival   :          " $(echo "scale=2; $lm/$survivors" | 
 
 echo -e "\n\n\n" 
 
+#To present the info in an orderly manner
 
+sed -r 's/, / /g' abc |sed -r 's/,,/, ,/g'| column -s, -t
